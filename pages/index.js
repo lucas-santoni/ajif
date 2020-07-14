@@ -1,209 +1,110 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import LoremIpsum from 'react-lorem-ipsum';
+import { SocialIcon } from 'react-social-icons';
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import Navbar from '../components/navbar';
+import Hero from '../components/hero';
+import Footer from '../components/footer';
+import Block from '../components/block';
+import Contact from '../components/contact';
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+const Index = () => (
+  <>
+    <Head>
+      <title>AJIF - Association des Jeunes Iraniens de France</title>
+      <link rel="icon" href="/favicon.png" />
+    </Head>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
+    <Navbar />
+
+    <main>
+      <Hero />
+      <Block title="Nos Valeurs" bg="#222" fg="#eee" id="valeurs">
+        <LoremIpsum p={2} avgSentencesPerParagraph={5} />
+        <p>
+          <a href="#">Cliquez ici pour en savoir plus...</a>
         </p>
+      </Block>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Block title="Événements" id="evenements">
+        <LoremIpsum p={1} avgSentencesPerParagraph={5} />
+        <p
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+          Nous utilisons
+          <img
+            src="/facebook.png"
+            alt="Facebook logo"
+            height={30}
+            style={{ margin: '0 0.3em' }}
+          />
+          pour nos événements.&nbsp;<a href="#">Cliquez ici</a>&nbsp;pour
+          rejoindre notre groupe !
+        </p>
+      </Block>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+      <Block title="Nous Rejoindre" bg="#222" fg="#eee" id="rejoindre">
+        <LoremIpsum p={2} avgSentencesPerParagraph={5} />
+        <SocialIcon url="https://twitter.com/jaketrent" />
+      </Block>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+      <Block title="Contact" min={'47em'} id="contact">
+        <p>
+          Une question ? Un message à faire passer ? Une idée ? N'hésitez pas à
+          nous contacter ! S'il vous plait, assurez-vous que l'adresse mail que
+          vous nous communiquez est correcte. Autrement, nous serons dans
+          l'impossibilité de vous répondre.
+        </p>
+        <br />
+        <Contact />
+      </Block>
+    </main>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+    <footer>
+      <Footer />
+    </footer>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
+    <style jsx global>{`
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Open Sans, Arial;
+        font-size: 1.07em;
+      }
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
+      .container {
+        max-width: 50em;
+        padding: 0 1em;
+        margin: 0 auto;
+      }
 
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
+      .large {
+        max-width: 60em;
+        padding: 0 1em;
+        margin: 0 auto;
+      }
 
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
+      a {
+        transition: color 0.3s;
+        color: #3267c2;
+        text-decoration: none;
+      }
 
-        .title,
-        .description {
-          text-align: center;
-        }
+      a:hover {
+        color: black;
+      }
+    `}</style>
+  </>
+);
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
-}
+export default Index;
