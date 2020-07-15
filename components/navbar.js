@@ -1,11 +1,17 @@
 const { enableBodyScroll, disableBodyScroll } = require('body-scroll-lock');
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Hidden, Visible } from 'react-grid-system';
 import { GrClose, GrMenu } from 'react-icons/gr';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    return () => {
+      clickHandler(false);
+    };
+  }, []);
 
   const clickHandler = state => {
     const html = document.querySelector('html');
@@ -19,17 +25,23 @@ const Navbar = () => {
     <>
       <nav className="nav" role="navigation">
         <div className="large">
-          <a href="/">
-            <img src="/banner.png" />
-          </a>
+          <Link href="/">
+            <a>
+              <img src="/banner.png" />
+            </a>
+          </Link>
 
           <Hidden xs sm md>
             <ul className="menu">
-              <li onClick={() => console.log('AAAA')}>
-                <a href="/#valeurs">Valeurs</a>
+              <li>
+                <Link href="/#valeurs">
+                  <a>Valeurs</a>
+                </Link>
               </li>
               <li>
-                <a href="/#evenements">Événements</a>
+                <Link href="/#evenements">
+                  <a>Événements</a>
+                </Link>
               </li>
               <li>
                 <Link href="/qui-sommes-nous">
@@ -37,10 +49,14 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a href="/#rejoindre">Nous Rejoindre</a>
+                <Link href="/#rejoindre">
+                  <a>Nous Rejoindre</a>
+                </Link>
               </li>
               <li className="last">
-                <a href="/#contact">Contact</a>
+                <Link href="/#contact">
+                  <a>Contact</a>
+                </Link>
               </li>
             </ul>
           </Hidden>
@@ -51,14 +67,14 @@ const Navbar = () => {
               </div>
               <ul className="side-menu">
                 <li>
-                  <a href="/#valeurs" onClick={() => clickHandler(false)}>
-                    Valeurs
-                  </a>
+                  <Link href="/#valeurs">
+                    <a onClick={() => clickHandler(false)}>Valeurs</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#evenements" onClick={() => clickHandler(false)}>
-                    Événements
-                  </a>
+                  <Link href="/#evenements">
+                    <a onClick={() => clickHandler(false)}>Événements</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/qui-sommes-nous">
@@ -66,12 +82,14 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="/#rejoindre" onClick={() => clickHandler(false)}>
-                    Nous Rejoindre
-                  </a>
+                  <Link href="/#rejoindre">
+                    <a onClick={() => clickHandler(false)}>Nous Rejoindre</a>
+                  </Link>
                 </li>
-                <li className="last" onClick={() => clickHandler(false)}>
-                  <a href="/#contact">Contact</a>
+                <li className="last">
+                  <Link href="/#contact">
+                    <a onClick={() => clickHandler(false)}>Contact</a>
+                  </Link>
                 </li>
               </ul>
             </div>
