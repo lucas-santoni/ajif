@@ -1,4 +1,4 @@
-const { enableBodyScroll, disableBodyScroll } = require('body-scroll-lock');
+import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Hidden, Visible } from 'react-grid-system';
@@ -132,6 +132,7 @@ const Navbar = () => {
           top: 0;
           right: 0;
           box-shadow: 3px 0px 10px #232931;
+          z-index: 99999;
         }
 
         #side.active {
