@@ -46,7 +46,7 @@ const Block = props => (
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: ${props.min || '10em'};
+        min-height: ${props.min || '30em'};
         height: auto;
         text-align: ${props.center && 'center'};
       }
