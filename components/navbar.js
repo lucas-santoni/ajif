@@ -26,21 +26,21 @@ const Navbar = () => {
           <Hidden xs sm md>
             <ul className="menu">
               <li onClick={() => console.log('AAAA')}>
-                <a href="#valeurs">Valeurs</a>
+                <a href="/#valeurs">Valeurs</a>
               </li>
               <li>
-                <a href="#evenements">Événements</a>
+                <a href="/#evenements">Événements</a>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/qui-sommes-nous">
                   <a>Qui sommes-nous ?</a>
                 </Link>
               </li>
               <li>
-                <a href="#rejoindre">Nous Rejoindre</a>
+                <a href="/#rejoindre">Nous Rejoindre</a>
               </li>
               <li className="last">
-                <a href="#contact">Contact</a>
+                <a href="/#contact">Contact</a>
               </li>
             </ul>
           </Hidden>
@@ -51,12 +51,12 @@ const Navbar = () => {
               </div>
               <ul className="side-menu">
                 <li>
-                  <a href="#valeurs" onClick={() => clickHandler(false)}>
+                  <a href="/#valeurs" onClick={() => clickHandler(false)}>
                     Valeurs
                   </a>
                 </li>
                 <li>
-                  <a href="#evenements" onClick={() => clickHandler(false)}>
+                  <a href="/#evenements" onClick={() => clickHandler(false)}>
                     Événements
                   </a>
                 </li>
@@ -66,12 +66,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="#rejoindre" onClick={() => clickHandler(false)}>
+                  <a href="/#rejoindre" onClick={() => clickHandler(false)}>
                     Nous Rejoindre
                   </a>
                 </li>
                 <li className="last" onClick={() => clickHandler(false)}>
-                  <a href="#contact">Contact</a>
+                  <a href="/#contact">Contact</a>
                 </li>
               </ul>
             </div>
