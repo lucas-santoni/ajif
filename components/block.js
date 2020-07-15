@@ -28,7 +28,7 @@ const Block = props => (
       .wrapper {
         background: ${props.bg || '#efefef'};
         color: ${props.fg || 'inherit'};
-        padding: 2em 0;
+        padding: 3em 0;
       }
 
       .bg-img {
@@ -46,7 +46,7 @@ const Block = props => (
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: ${props.min || '30em'};
+        min-height: ${props.min || '10em'};
         height: auto;
         text-align: ${props.center && 'center'};
       }

@@ -34,7 +34,11 @@ const Index = () => (
             src="/facebook.png"
             alt="Facebook logo"
             height={30}
-            style={{ margin: '0 0.3em', textAlign: 'middle' }}
+            style={{
+              margin: '0 0.3em',
+              marginBottom: '-7px',
+              textAlign: 'middle',
+            }}
           />
           pour nos événements.&nbsp;<a href="#">Cliquez ici</a>&nbsp;pour
           rejoindre notre groupe !
@@ -46,7 +50,7 @@ const Index = () => (
         <SocialIcon url="https://twitter.com/jaketrent" />
       </Block>
 
-      <Block title="Contact" min={'47em'} id="contact">
+      <Block title="Contact" id="contact">
         <p>
           Une question ? Un message à faire passer ? Une idée ? N'hésitez pas à
           nous contacter ! S'il vous plait, assurez-vous que l'adresse mail que
@@ -71,6 +75,7 @@ const Index = () => (
         margin: 0;
         font-family: Open Sans, Arial;
         font-size: 1.07em;
+        scroll-behavior: smooth;
       }
 
       * {
@@ -91,12 +96,12 @@ const Index = () => (
 
       a {
         transition: color 0.3s;
-        color: #3267c2;
         text-decoration: none;
+        color: #3267c2;
       }
 
       a:hover {
-        color: black;
+        color: #7198da;
       }
     `}</style>
   </>
