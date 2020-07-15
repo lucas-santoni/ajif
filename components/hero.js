@@ -5,11 +5,7 @@ const Hero = () => (
     <div className="wrapper">
       <div className="darken">
         <div className="container">
-          <h1>
-            Association des Jeunes
-            <br />
-            Iraniens de France
-          </h1>
+          <h1>Association des Jeunes Iraniens de France</h1>
           <div className="text">
             <LoremIpsum p={1} avgSentencesPerParagraph={5} />
           </div>
@@ -25,6 +21,16 @@ const Hero = () => (
 
       .text {
         font-size: 1.3em;
+      }
+
+      @media screen and (max-width: 640px) {
+        h1 {
+          font-size: 2em;
+        }
+
+        .text {
+          font-size: 1.1em;
+        }
       }
 
       * {

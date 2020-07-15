@@ -1,4 +1,5 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Hidden } from 'react-grid-system';
 
 const Navbar = () => (
   <>
@@ -8,23 +9,25 @@ const Navbar = () => (
           <img src="/banner.png" />
         </a>
 
-        <ul className="menu">
-          <li>
-            <AnchorLink href="#valeurs">Valeurs</AnchorLink>
-          </li>
-          <li>
-            <AnchorLink href="#evenements">Événements</AnchorLink>
-          </li>
-          <li>
-            <a href="#">Qui sommes-nous ?</a>
-          </li>
-          <li>
-            <AnchorLink href="#rejoindre">Nous Rejoindre</AnchorLink>
-          </li>
-          <li className="last">
-            <AnchorLink href="#contact">Contact</AnchorLink>
-          </li>
-        </ul>
+        <Hidden xs sm md>
+          <ul className="menu">
+            <li>
+              <AnchorLink href="#valeurs">Valeurs</AnchorLink>
+            </li>
+            <li>
+              <AnchorLink href="#evenements">Événements</AnchorLink>
+            </li>
+            <li>
+              <a href="#">Qui sommes-nous ?</a>
+            </li>
+            <li>
+              <AnchorLink href="#rejoindre">Nous Rejoindre</AnchorLink>
+            </li>
+            <li className="last">
+              <AnchorLink href="#contact">Contact</AnchorLink>
+            </li>
+          </ul>
+        </Hidden>
       </div>
     </nav>
 

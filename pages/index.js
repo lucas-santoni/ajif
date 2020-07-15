@@ -28,18 +28,13 @@ const Index = () => (
 
       <Block title="Événements" id="evenements">
         <LoremIpsum p={1} avgSentencesPerParagraph={5} />
-        <p
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
+        <p>
           Nous utilisons
           <img
             src="/facebook.png"
             alt="Facebook logo"
             height={30}
-            style={{ margin: '0 0.3em' }}
+            style={{ margin: '0 0.3em', textAlign: 'middle' }}
           />
           pour nos événements.&nbsp;<a href="#">Cliquez ici</a>&nbsp;pour
           rejoindre notre groupe !

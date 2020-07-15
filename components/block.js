@@ -19,9 +19,16 @@ const Block = props => (
         text-align: ${props.center && 'center'};
       }
 
+      @media screen and (max-width: 640px) {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+
       .wrapper {
         background: ${props.bg || '#efefef'};
         color: ${props.fg || 'inherit'};
+        padding: 2em 0;
       }
 
       .bg-img {
@@ -39,7 +46,7 @@ const Block = props => (
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: ${props.min || '35em'};
+        min-height: ${props.min || '30em'};
         height: auto;
         text-align: ${props.center && 'center'};
       }
