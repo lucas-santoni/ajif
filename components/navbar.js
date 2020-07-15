@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const clickHandler = state => {
     const html = document.querySelector('html');
-    document.getElementById('side').classList.toggle('active');
+    document.getElementById('side')?.classList.toggle('active');
 
     setVisible(state);
     state ? disableBodyScroll(html) : enableBodyScroll(html);
