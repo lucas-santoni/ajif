@@ -1,5 +1,5 @@
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { SocialIcon } from 'react-social-icons';
+import Social from './social';
 
 const Hero = () => (
   <>
@@ -9,17 +9,8 @@ const Hero = () => (
           <h1>Association des Jeunes Iraniens de France</h1>
           <div className="text">
             <LoremIpsum p={1} avgSentencesPerParagraph={5} />
-            <p className="social">
-              <span className="social-wrapper">
-                <SocialIcon url="https://twitter.com/geographeur" />
-              </span>
-              <span className="social-wrapper">
-                <SocialIcon url="https://instagram.com/santoni_lucas" />
-              </span>
-              <span className="social-wrapper">
-                <SocialIcon url="https://facebook.com/lucas.santoni.1337/" />
-              </span>
-            </p>
+            <br />
+            <Social />
           </div>
         </div>
       </div>
@@ -66,14 +57,6 @@ const Hero = () => (
       .darken {
         background: rgba(0, 0, 0, 0.6);
         color: #eee;
-      }
-
-      .social-wrapper {
-        padding: 0 0.5em;
-      }
-
-      .social {
-        padding-top: 2em;
       }
     `}</style>
   </>

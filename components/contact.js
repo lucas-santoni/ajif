@@ -1,5 +1,13 @@
 const Contact = () => (
   <>
+    <p>
+      Une question ? Un message à faire passer ? Une idée ? N'hésitez pas à nous
+      contacter ! S'il vous plait, assurez-vous que l'adresse mail que vous nous
+      communiquez est correcte. Autrement, nous serons dans l'impossibilité de
+      vous répondre.
+    </p>
+
+    <br />
     <div className="ctn">
       <form action="#">
         <label htmlFor="fname">Nom</label>

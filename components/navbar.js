@@ -26,8 +26,13 @@ const Navbar = () => {
       <nav className="nav" role="navigation">
         <div className="large">
           <Link href="/">
-            <a>
-              <img src="/banner.png" />
+            <a style={{ color: 'inherit' }}>
+              <div className="logo">
+                <img src="/logo.png" />
+                <span style={{ marginLeft: '0.3em', fontSize: '1.07em' }}>
+                  AJIF
+                </span>
+              </div>
             </a>
           </Link>
 
@@ -137,6 +142,11 @@ const Navbar = () => {
 
         #side.active {
           display: block;
+        }
+
+        .logo {
+          display: flex;
+          align-items: center;
         }
 
         .close {
