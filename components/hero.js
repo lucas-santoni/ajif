@@ -26,6 +26,22 @@ const Hero = () => (
         font-size: 1.3em;
       }
 
+      @media screen and (max-width: 699px) {
+        .wrapper {
+          background-image: url('/hero-background-mobile.jpg');
+          background-position: bottom 30% left 0;
+          background-size: cover;
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        .wrapper {
+          background-image: url('/hero-background.jpeg');
+          background-position: bottom 30% left 0;
+          background-size: cover;
+        }
+      }
+
       @media screen and (max-width: 640px) {
         h1 {
           font-size: 2em;
@@ -46,12 +62,6 @@ const Hero = () => (
         justify-content: center;
         min-height: calc(100vh - 4.5em);
         height: auto;
-      }
-
-      .wrapper {
-        background-image: url('/hero-background.jpeg');
-        background-position: bottom 30% left 0;
-        background-size: cover;
       }
 
       .darken {
