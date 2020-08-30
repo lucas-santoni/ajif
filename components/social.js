@@ -20,7 +20,7 @@ const Social = () => (
     </span>
     <style jsx>{`
       .social-wrapper {
-        padding: 0 0.5em< / a>;
+        padding: 0 0.5em;
       }
 
       .social {
