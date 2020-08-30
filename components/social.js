@@ -1,24 +1,26 @@
 import { SocialIcon } from 'react-social-icons';
 
+import { twitter, instagram, facebook, linkedin } from '../texts/links';
+
 const Social = () => (
   <>
     <span className="social">
       <span className="social-wrapper">
-        <SocialIcon url="https://twitter.com/geographeur" />
+        <SocialIcon url={twitter} />
       </span>
       <span className="social-wrapper">
-        <SocialIcon url="https://instagram.com/santoni_lucas" />
+        <SocialIcon url={instagram} />
       </span>
       <span className="social-wrapper">
-        <SocialIcon url="https://facebook.com/lucas.santoni.1337/" />
+        <SocialIcon url={facebook} />
       </span>
       <span className="social-wrapper">
-        <SocialIcon url="https://www.linkedin.com/in/lucas1337/" />
+        <SocialIcon url={linkedin} />
       </span>
     </span>
     <style jsx>{`
       .social-wrapper {
-        padding: 0 0.5em;
+        padding: 0 0.5em< / a>;
       }
 
       .social {

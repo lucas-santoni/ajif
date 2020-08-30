@@ -4,7 +4,7 @@ const Footer = () => (
       <div className="container">
         <div className="content">
           <p>
-            L'AJIF est une association loi 1901.
+            L'AJIF est une association loi de 1901.
             <br />
             Tous droits réservés.
           </p>

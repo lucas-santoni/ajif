@@ -54,6 +54,18 @@ const Layout = ({ children }) => (
       a:hover {
         color: #7198da;
       }
+
+      .card {
+        padding: 2.5em 1.1em;
+        border-radius: 5px;
+        background-color: #fafafa;
+        transition: box-shadow 0.3s;
+        border: 1px solid #ccc;
+      }
+
+      .card:hover {
+        box-shadow: 0 0 11px #ccc;
+      }
     `}</style>
   </>
 );

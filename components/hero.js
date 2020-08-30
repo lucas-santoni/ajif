@@ -1,14 +1,13 @@
-import { LoremIpsum } from 'react-lorem-ipsum';
 import Social from './social';
 
-const Hero = () => (
+const Hero = ({ txt }) => (
   <>
     <div className="wrapper">
       <div className="darken">
         <div className="container">
           <h1>Association des Jeunes Iraniens de France</h1>
           <div className="text">
-            <LoremIpsum p={1} avgSentencesPerParagraph={5} />
+            {txt}
             <br />
             <Social />
           </div>

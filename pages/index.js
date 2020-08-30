@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import LoremIpsum from 'react-lorem-ipsum';
 
 import Block from '../components/block';
 import Contact from '../components/contact';
@@ -8,6 +7,15 @@ import Events from '../components/events';
 import Hero from '../components/hero';
 import Layout from '../components/layout';
 import Social from '../components/social';
+
+import {
+  intro,
+  values,
+  meetups,
+  afterworks,
+  forum,
+  join,
+} from '../texts/index';
 
 const pageURL = 'https://ajif.eu/';
 const OGImage = `${pageURL}og.jpg`;
@@ -40,20 +48,20 @@ const Index = () => (
         }}
       />
 
-      <Hero />
+      <Hero txt={intro} />
       <Block title="Nos Valeurs" bg="#222" fg="#eee" id="valeurs">
-        <LoremIpsum p={2} avgSentencesPerParagraph={5} />
+        {values}
         <p>
-          <a href="#">Cliquez ici pour en savoir plus...</a>
+          <a href="/qui-sommes-nous">Cliquez ici pour en savoir plus...</a>
         </p>
       </Block>
 
       <Block title="Événements" id="evenements">
-        <Events />
+        <Events meetups={meetups} afterworks={afterworks} forum={forum} />
       </Block>
 
       <Block title="Nous Rejoindre" bg="#222" fg="#eee" id="rejoindre">
-        <LoremIpsum p={1} avgSentencesPerParagraph={6} />
+        {join}
         <Social />
       </Block>
 

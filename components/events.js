@@ -1,45 +1,29 @@
 import { Row, Col } from 'react-grid-system';
 
-const Events = () => (
+import { facebook } from '../texts/links';
+
+const Events = ({ meetups, afterworks, forum }) => (
   <>
     <div className="events">
       <Row>
         <Col md={4}>
           <div className="card blue">
             <span style={{ fontWeight: 'bold' }}>Rencontres</span>
-            <div className="content">
-              <p>
-                Généralement, on utilise un texte en faux latin (le texte ne
-                veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum, qui
-                permet donc de faire office de texte d'attente.
-              </p>
-            </div>
+            <div className="content">{meetups}</div>
           </div>
         </Col>
 
         <Col md={4}>
           <div className="card green">
             <span style={{ fontWeight: 'bold' }}>Afterworks</span>
-            <div className="content">
-              <p>
-                Ce texte a pour autre avantage d'utiliser des mots de longueur
-                variable, essayant de simuler une occupation normale. La méthode
-                simpliste consistant à copier-coller un court texte plusieurs.
-              </p>
-            </div>
+            <div className="content">{afterworks}</div>
           </div>
         </Col>
 
         <Col md={4}>
           <div className="card red">
-            <span style={{ fontWeight: 'bold' }}>Forum de l'Orientation</span>
-            <div className="content">
-              <p>
-                Il circule des centaines de versions différentes du Lorem ipsum,
-                mais ce texte aurait originellement été tiré de l'ouvrage de
-                Cicéron, De Finibus Bonorum et Malorum (Liber Primus, 32).
-              </p>
-            </div>
+            <span style={{ fontWeight: 'bold' }}>Forum AJIF</span>
+            <div className="content">{forum}</div>
           </div>
         </Col>
       </Row>
@@ -58,7 +42,7 @@ const Events = () => (
       />
       pour nos événements.&nbsp;
       <span className="bold">
-        <a href="#">Cliquez ici</a>&nbsp;pour rejoindre notre groupe !
+        <a href={facebook}>Cliquez ici</a>&nbsp;pour rejoindre notre groupe !
       </span>
     </p>
 
@@ -66,13 +50,6 @@ const Events = () => (
       .events {
         margin-top: 1.5em;
         text-align: center;
-      }
-
-      .card {
-        padding: 2.5em 1.1em;
-        border-radius: 5px;
-        background-color: #fafafa;
-        transition: box-shadow 0.3s;
       }
 
       @media screen and (min-width: 770px) {

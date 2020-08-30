@@ -17,3 +17,6 @@ yarn-error.log*
 
 # Vercel
 .vercel
+
+# Added manually
+.vscode
