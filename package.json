@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "body-scroll-lock": "^3.0.3",
-    "next": "9.4.4",
+    "next": "11.1.0",
     "next-seo": "^4.7.3",
     "react": "16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
